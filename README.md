@@ -3,7 +3,7 @@
 - [Prof Matheus Jardim Bernardes](https://matheusjardimb.com/)
 - [Atitus.edu.br](https://atitus.edu.br/)
 >magnum opus da internet brasileira abaixo
-- [pudim.com.br](pudim.com.br)
+- [pudim.com.br](https://pudim.com.br)
 
 Exercícios de aula da disciplina de Pensamento Computacional.
 
