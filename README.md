@@ -2,12 +2,14 @@
 
 - [Prof Matheus Jardim Bernardes](https://matheusjardimb.com/)
 - [Atitus.edu.br](https://atitus.edu.br/)
+>magnum opus da internet brasileira abaixo
+- [pudim.com.br](pudim.com.br)
 
 Exercícios de aula da disciplina de Pensamento Computacional.
 
 ## Sobre mim
 
---PREENCHER--
+🔷 brasileiro, estudante de Ciência da Computação e... só isso mesmo .-.
 
 ## DICAS:
 
