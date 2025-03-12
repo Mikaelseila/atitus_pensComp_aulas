@@ -7,6 +7,13 @@
 
 Exercícios de aula da disciplina de Pensamento Computacional.
 
+| Sega | Xbox |
+|------|------|
+| Master System foi mais ou menos no país de origem e sucesso em certas partes| Xbox original foi mais ou menos em vendas, foi um flop no Japão e sucesso no quesito online|
+|Mega Drive foi pico absoluto, destronou a Nintendo e flopou no Japão| Xbox 360 foi um sucesso imediato, destronou a Sony e também flopou no Japão|
+|Sega Saturn foi um bom console e sucesso no Japão, mas se ferrou mundialmente graças ao ego e marcou a decadência da marca| Xbox One se ferrou desde o lançamento, completamente cegados pelo ego e transformou a marca em piada por anos|
+|Dreamcast foi uma tentativa de se reerguer (e quase conseguiu), mas mesmo gastando bilhões e produzindo jóias raras de jogos, a reputação manchada pelo passado e o titã que era o PS2 levou ao "fracasso", a quase falência da Sega e a saída dela do mercado de consoles.| Xbox Series X/S tem bons pontos (especialmente pra países emergentes) como o Game Pass e preços mais acessíveis (pelo menos até pouco tempo atrás), mas a mancha da geração anterior e a ignorância da Microsoft levam a indicar que o Xbox seguirá o mesmo caminho de deixar os consoles de lado.|
+
 ## Sobre mim
 
 🔷 brasileiro, estudante de Ciência da Computação e... só isso mesmo .-.
