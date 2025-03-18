@@ -1,10 +1,10 @@
 def metro_para_centimetro(valor):
-    # TODO: preencher
+    return valor * 100
     pass
 
 
 def centimetro_para_metro(valor):
-    # TODO: preencher
+    return valor / 100
     pass
 
 
