@@ -6,7 +6,7 @@ def eh_primo(numero: int) -> bool:
             return False
         if numero > 1:
             for i in range(2, numero): #calcula cada número verdadeiro entre 2 e o número digitado
-                if numero % i == 0: #se o resultado da divisão entre o número e o i for 0, ele não é primo
+                if numero % i == 0: #se o resultado da divisão entre o número e o i não ser 1 ou ele mesmo, esqueça: ele não é primo
                     return False
             else:
                 return True #caso o contrário, ele é um número primo.
