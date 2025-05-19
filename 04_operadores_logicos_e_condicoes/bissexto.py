@@ -1,11 +1,10 @@
 def eh_bissexto(ano):
-    # Preencher
-    pass
+    return ano % 4 == 0
 
 
 def proximo_bissexto(ano):
-    # Preencher
-    pass
+    if ano % 4 != 0:
+     return False
 
 
 assert eh_bissexto(0)
