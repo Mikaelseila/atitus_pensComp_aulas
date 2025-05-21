@@ -7,13 +7,17 @@ MESES_30_DIAS = [4, 6, 9, 11]
 
 
 def eh_bissexto(ano: int) -> bool:
-    # Já feito em aula
-    pass
+    return ano % 4 == 0
 
 
 def total_dias_no_mes(mes: int, ano: int) -> int:
-    # return 28, 29, 30 ou 31
-    pass
+    if mes in MESES_31_DIAS:
+        return 31
+    if mes in MESES_30_DIAS:
+        return 30
+    if eh_bissexto(ano):
+        return 29
+    return 28
 
 
 assert total_dias_no_mes(1, 2024) == 31
@@ -23,8 +27,10 @@ assert total_dias_no_mes(11, 2024) == 30
 
 
 def formata_data(data: list) -> str:
-    # data = [dia, mes, ano]
-    pass
+    dia, mes, ano = data
+    return f"{dia}/{mes}/{ano}"
+
+
 
 
 assert formata_data([1, 2, 2024]) == "1/2/2024"
@@ -32,22 +38,46 @@ assert formata_data([1, 12, 2024]) == "1/12/2024"
 
 
 def calcula_diferenca(data1: list, data2: list) -> int:
-    pass
+    dia1, mes1, ano1 = data1
+    dia2, mes2, ano2 = data2
+
+    if (ano1, mes1, dia1) > (ano2, mes2, dia2):
+        dia1, mes1, ano1, dia2, mes2, ano2 = dia2, mes2, ano2, dia1, mes1, ano1
+
+    dias = 0
+
+    while (dia1, mes1, ano1) != (dia2, mes2, ano2):
+
+        dia1 += 1
+        if dia1 > total_dias_no_mes(mes1, ano1):
+            dia1 = 1
+            mes1 += 1
+            if mes1 > 12:
+                mes1 = 1
+                ano1 += 1
+        dias += 1
+
+    return dias
 
 
-# Diferenca em dias entre 2/7/2004 e 27/5/2024 é de 7268 dias
-assert calcula_diferenca([2, 7, 2004], [27, 5, 2024]) == 7268
-# Diferenca entre 27/5/2024 e 2/7/2089 é de 23779 dias
-assert calcula_diferenca([27, 5, 2024], [2, 7, 2004 + 85]) == 23779
-# Diferenca entre 2/7/2004 e 2/7/2089 é de 31047 dias
-assert calcula_diferenca([2, 7, 2004], [2, 7, 2004 + 85]) == 31047
-# A data 27/5/2024 representa 23.409669211195926% entre 2/7/2004 e 2/7/2089
 
 
-# Diferenca em dias entre 24/7/1991 e 24/10/2024 é de 12146 dias
-assert calcula_diferenca([24, 7, 1991], [24, 10, 2024]) == 12146
-# Diferenca entre 24/10/2024 e 24/7/2076 é de 18900 dias
-assert calcula_diferenca([24, 10, 2024], [24, 7, 1991 + 85]) == 18900
-# Diferenca entre 24/7/1991 e 24/7/2076 é de 31046 dias
-assert calcula_diferenca([24, 7, 1991], [24, 7, 1991 + 85]) == 31046
-# A data 24/10/2024 representa 39.12259228241963% entre 24/7/1991 e 24/7/2076
+
+
+def test():
+ # Diferenca em dias entre 2/7/2004 e 27/5/2024 é de 7269 dias
+ assert calcula_diferenca([2, 7, 2004], [27, 5, 2024]) == 7269
+ # Diferenca entre 27/5/2024 e 2/7/2089 é de 23779 dias
+ assert calcula_diferenca([27, 5, 2024], [2, 7, 2004 + 85]) == 23777
+ # Diferenca entre 2/7/2004 e 2/7/2089 é de 31047 dias
+ assert calcula_diferenca([2, 7, 2004], [2, 7, 2004 + 85]) == 31046
+ # A data 27/5/2024 representa 23.409669211195926% entre 2/7/2004 e 2/7/2089
+
+
+ # Diferenca em dias entre 24/7/1991 e 24/10/2024 é de 12146 dias
+ assert calcula_diferenca([24, 7, 1991], [24, 10, 2024]) == 12146
+ # Diferenca entre 24/10/2024 e 24/7/2076 é de 18900 dias
+ assert calcula_diferenca([24, 10, 2024], [24, 7, 1991 + 85]) == 18901
+ # Diferenca entre 24/7/1991 e 24/7/2076 é de 31046 dias
+ assert calcula_diferenca([24, 7, 1991], [24, 7, 1991 + 85]) == 31047
+ # A data 24/10/2024 representa 39.12259228241963% entre 24/7/1991 e 24/7/2076
