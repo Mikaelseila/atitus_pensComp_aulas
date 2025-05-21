@@ -27,7 +27,7 @@ assert total_dias_no_mes(11, 2024) == 30
 
 
 def formata_data(data: list) -> str:
-    dia, mes, ano = data
+    dia, mes, ano = data #a data é o dia, mes e o ano citado no assert (inicialmente tentei fazer ao contrário (tipo, data = dia, mes, ano), mas não funcionava .-.)
     return f"{dia}/{mes}/{ano}"
 
 
@@ -38,21 +38,21 @@ assert formata_data([1, 12, 2024]) == "1/12/2024"
 
 
 def calcula_diferenca(data1: list, data2: list) -> int:
-    dia1, mes1, ano1 = data1
+    dia1, mes1, ano1 = data1 #data1 e data2 tem o mesmo principio do data de formata_data, mas os números separam qual é qual
     dia2, mes2, ano2 = data2
 
-    if (ano1, mes1, dia1) > (ano2, mes2, dia2):
+    if (ano1, mes1, dia1) > (ano2, mes2, dia2): 
         dia1, mes1, ano1, dia2, mes2, ano2 = dia2, mes2, ano2, dia1, mes1, ano1
 
-    dias = 0
+    dias = 0 #quantidade de dias entre uma data e outra
 
-    while (dia1, mes1, ano1) != (dia2, mes2, ano2):
+    while (dia1, mes1, ano1) != (dia2, mes2, ano2): #enquanto data1 for diferente de data2, ele fará o seguinte passo-a-passo:
 
-        dia1 += 1
-        if dia1 > total_dias_no_mes(mes1, ano1):
+        dia1 += 1 
+        if dia1 > total_dias_no_mes(mes1, ano1): #se o dia1 for maior que o total de dias no mês selecionado, ele reseta para 1 e adiciona mais um mês
             dia1 = 1
             mes1 += 1
-            if mes1 > 12:
+            if mes1 > 12: #se o mês for dezembro, ao chegar ao dia final, ele reseta para janeiro e adiciona 1 ano a mais
                 mes1 = 1
                 ano1 += 1
         dias += 1
