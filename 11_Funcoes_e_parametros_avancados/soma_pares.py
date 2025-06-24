@@ -1,9 +1,9 @@
 def soma_pares(numeros: list, alvo: int) -> bool:
     somar = []
-    for numero in numeros:
+    for numero in numeros: #pra cada número na lista, adicione ele na lista somar
         somar.append(numero)
 
-    for n in range(len(somar)):
+    for n in range(len(somar)): #pra cada numero ao longo da lista somar, se a soma deles for igual ao alvo, retorna True, caso o contrário, ele retorna False.
         for j in range(len(somar)):
             if somar[n] + somar[j] == alvo:
                 return True
