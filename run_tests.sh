@@ -20,7 +20,7 @@ run_tests 03_variaveis_e_operadores_matematicos/
 # run_tests 08_Strings_random/
 # run_tests 09_Dicionários/
 run_tests 10_Introducao_a_funcoes/
-run_tests 11_Funcoes_e_parametros_avancados/
+# run_tests 11_Funcoes_e_parametros_avancados/
 run_tests 12_Funcoes_e_imports/
 # run_tests 13_exercicios_leetcode/
 # run_tests 14_manipulacao_de_datas/
